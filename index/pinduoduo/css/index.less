@@ -1,0 +1,312 @@
+@import url(./common.less);
+@import url(./normalize.css);
+@font: 50px;
+
+body {
+  min-width: 320px;
+  width: (750rem / @font);
+  line-height: 1.5;
+  font-family: Arial, Helvetica;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+header {
+  width: (750rem / @font);
+  height: (65rem / @font);
+  background: url(../img/headerbg.png);
+  font-size: (16rem / @font );
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+
+  span {
+    font-size: (22rem / @font);
+    color: #fff;
+    line-height: (65rem / @font);
+    margin-left: (35rem / @font );
+  }
+
+  .left,
+  .right,
+  span {
+    float: left;
+  }
+
+  .left {
+    width: (180rem / @font);
+    height: 100%;
+
+
+    img {
+      width: (141rem / @font );
+      height: (47rem / @font );
+      margin: (10rem / @font) (30rem / @font );
+    }
+  }
+
+  .right {
+    width: (180rem / @font);
+    height: 100%;
+    float: right;
+
+    .buy {
+      width: (150rem / @font);
+      height: (45rem / @font );
+      background-color: #fff;
+      border-radius: (2rem / @font );
+      margin: (10rem / @font ) 0;
+      text-align: center;
+      line-height: (45rem / @font );
+      font-size: (22rem / @font);
+      color: red;
+    }
+  }
+}
+
+nav {
+  width: 100%;
+  background-color: #f4f4f4;
+  font-size: (16px / @font );
+
+  ul {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    li {
+      width: (125rem / @font );
+      height: (80rem / @font);
+      float: left;
+      line-height: (80rem / @font);
+      font-size: (20rem / @font);
+      text-align: center;
+
+      transition: all 1s;
+      font-weight: 500;
+
+      a {
+        color: #6c6c6c;
+        text-decoration: none;
+
+        &:hover {
+          color: #ed435b;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.banner {
+  width: 100%;
+  height: (214rem / @font);
+  background: url(../img/banner.jpg) no-repeat;
+  background-size: 100% (214rem / @font);
+}
+
+.subject {
+  width: 100%;
+
+  .title {
+    font-size: (25rem / @font);
+    background-color: #fff;
+    padding: (20rem / @font) (15rem / @font);
+
+    span:last-child {
+      float: right;
+      font-size: (16rem / @font);
+      line-height: (40rem / @font);
+
+      a {
+        text-decoration: none;
+        color: #6c6c6c;
+      }
+    }
+
+    span:first-child {
+      float: left;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+  }
+
+  .content {
+    width: 100%;
+
+    div {
+      &:first-child {
+        height: (226.55rem / @font );
+        background: url(../img/seckill.jpg) no-repeat;
+        background-size: 100% (226.55rem / @font );
+      }
+
+      &:last-child {
+        width: 100%;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden;
+        }
+
+        .left,
+        .right {
+          width: 50%;
+          height: (180rem / @font );
+          float: left;
+          background-size: 100% auto !important;
+        }
+
+        .left {
+          background: url(../img/sale_index.jpg) no-repeat;
+        }
+
+        .right {
+          background: url(../img/supermarket.jpg) no-repeat;
+        }
+      }
+    }
+  }
+
+  .banner {
+    width: 100%;
+    height: (350rem / @font );
+    background: url(../img/girlclothes.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  .boys {
+    background: url(../img/boyshirt.jpg) no-repeat;
+    background-size: 100% auto;
+  }
+
+  .shops {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    div {
+      flex: 1;
+      height: (330rem / @font );
+      padding: (10rem / @font );
+      display: flex;
+      flex-direction: column;
+      font-size: (16rem / @font );
+
+      .img {
+        flex: 1;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .name {
+        font-size: (20rem / @font);
+        padding: 0;
+        text-align: center;
+      }
+
+      .price {
+        font-size: (25rem / @font );
+        flex-direction: row;
+
+        span {
+          flex: 1;
+
+          &:first-child {
+            text-align: right;
+          }
+
+          &:last-child {
+            font-size: (20rem / @font );
+            align-self: center;
+            color: #cbcbcb;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}
+
+.search {
+  width: 100%;
+
+  font-size: (20rem / @font);
+  // background-color: #f1e7e7;
+  margin: (30rem / @font) 0;
+  padding: (10rem / @font) 0;
+
+  span:last-child {
+    float: right;
+    font-size: (16rem / @font);
+    line-height: (40rem / @font);
+    margin-right: (10rem / @font );
+
+    a {
+      text-decoration: none;
+      color: #6c6c6c;
+    }
+  }
+
+  span:first-child {
+    float: left;
+    margin-left: (10rem / @font );
+    line-height: (40rem / @font);
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+footer {
+  width: 100%;
+  padding: (25rem / @font ) (10rem / @font );
+  padding-bottom: 0;
+  background-color: #e7dddd;
+  color: #000;
+
+  div {
+    text-align: center;
+    padding: (5rem / @font ) 0;
+    font-size: (20rem / @font ) !important;
+
+    &:first-child {
+      border-top: 1px solid #000;
+    }
+  }
+}
